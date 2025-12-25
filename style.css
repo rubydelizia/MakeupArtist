@@ -1,0 +1,279 @@
+/* ===== Reset & Font ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #ffe6f0; /* soft pink utama */
+  color: #3c2e1e;
+  scroll-behavior: smooth;
+}
+
+/* === Navbar === */
+header {
+  background: #fffaf2;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 12px rgba(200, 160, 80, 0.1);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 8%;
+}
+
+.logo {
+  font-family: "Playfair Display", serif;
+  color: #c9a44e;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #4e3b24;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #c9a44e;
+}
+
+/* === Hero === */
+.hero {
+  background: url('fotokamila.jpg') center/cover no-repeat;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #3c2e1e;
+}
+
+.hero-content {
+  background: rgba(255, 255, 255, 0.6);
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 650px;
+}
+
+.hero-content h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.6rem;
+  color: #b48a3a;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  margin-bottom: 25px;
+  line-height: 1.6;
+  color: #4e3b24;
+}
+
+/* === Tombol Berkilau === */
+.btn {
+  background: linear-gradient(135deg, #c9a44e, #e3c87b);
+  color: white;
+  padding: 12px 28px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.7), transparent);
+  transition: all 0.8s ease;
+}
+
+.btn:hover::before {
+  left: 100%;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* === Section Umum === */
+section {
+  padding: 80px 10%;
+  text-align: center;
+}
+
+h2 {
+  font-family: "Playfair Display", serif;
+  color: #b48a3a;
+  font-size: 2rem;
+  margin-bottom: 25px;
+}
+
+/* === Services === */
+.service-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  justify-items: center;
+}
+
+.service-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 18px;
+  width: 280px;
+  box-shadow: 0 6px 15px rgba(200, 160, 80, 0.1);
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+.service-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(185, 145, 45, 0.25);
+}
+
+.service-card img {
+  width: 100%;
+  border-radius: 12px;
+  transition: all 0.4s ease;
+}
+
+.service-card:hover img {
+  transform: scale(1.05);
+  opacity: 0.95;
+}
+
+.service-card h3 {
+  margin-top: 12px;
+  font-family: "Playfair Display", serif;
+  color: #b48a3a;
+  font-size: 1.2rem;
+}
+
+.service-card p {
+  color: #4e3b24;
+  font-size: 0.95rem;
+  margin-top: 5px;
+  line-height: 1.4;
+}
+
+/* === Look Adat dengan background berbeda === */
+.looks {
+  background-color: #fffaf2; /* soft pink berbeda */
+  padding: 80px 10%;
+  border-radius: 20px;
+}
+
+.look-gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.look-card {
+  width: 140px;
+  text-align: center;
+}
+
+.look-card img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover; /* semua gambar kotak sama */
+  border-radius: 12px;
+  border: 2px solid #e9d9b3;
+  transition: all 0.3s ease;
+}
+
+.look-card img:hover {
+  transform: scale(1.05);
+}
+
+.look-card p {
+  margin-top: 8px;
+  font-weight: 500;
+  color: #4e3b24;
+}
+
+/* === Booking === */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+input, textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #d9c59c;
+  font-family: "Poppins", sans-serif;
+}
+
+textarea {
+  height: 120px;
+  resize: none;
+}
+
+/* === Footer & Sosial Links === */
+footer {
+  background: #fffaf2;
+  color: #6b5634;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  border-top: 1px solid #f0e6d2;
+}
+
+footer .social-links {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+footer .social-links a {
+  text-decoration: none;
+  color: #b48a3a;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+footer .social-links a:hover {
+  color: #c9a44e;
+  text-decoration: underline;
+}
+
+/* === Animasi === */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
