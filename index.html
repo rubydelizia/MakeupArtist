@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-9Z0B26NLJ4"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZVT9XN4KL4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'G-9Z0B26NLJ4');
-</script>
+    gtag('config', 'G-ZVT9XN4KL4');
+  </script>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kamila Wedding - Makeup Artist</title>
@@ -44,7 +45,11 @@
   <!-- Tentang -->
   <section id="about" class="about fade-in">
     <h2>Tentang Kami</h2>
-    <p>Tim Kamila Wedding hadir untuk menciptakan tampilan terbaikmu di hari spesial. Fokus kami adalah makeup yang menonjolkan kecantikan alami, elegan, dan tahan lama, sehingga kamu bisa menikmati setiap momen tanpa khawatir. Setiap detail diperhatikan supaya hasilnya flawless, membuatmu merasa percaya diri dan anggun sepanjang acara.”</p>
+    <p>
+      Tim Kamila Wedding hadir untuk menciptakan tampilan terbaikmu di hari spesial.
+      Fokus kami adalah makeup yang menonjolkan kecantikan alami, elegan, dan tahan lama,
+      sehingga kamu bisa menikmati setiap momen tanpa khawatir.
+    </p>
   </section>
 
   <!-- Layanan -->
@@ -73,12 +78,12 @@
   <section id="looks" class="looks fade-in">
     <h2>Look Adat</h2>
     <div class="look-gallery">
-      <div class="look-card"><img src="sundaa.jpg" alt="Look Sunda"><p>Sunda</p></div>
-      <div class="look-card"><img src="minang.jpg" alt="Look Minang"><p>Minang</p></div>
-      <div class="look-card"><img src="palembang.jpeg" alt="Look Palembang"><p>Palembang</p></div>
-      <div class="look-card"><img src="betawii.jpg" alt="Look Betawi"><p>Betawi</p></div>
-      <div class="look-card"><img src="jawa.jpg" alt="Look Jawa"><p>Jawa</p></div>
-       <div class="look-card"><img src="jawa solo.jpg" alt="Look Jawa"><p>Jawa solo</p></div>
+      <div class="look-card"><img src="sundaa.jpg"><p>Sunda</p></div>
+      <div class="look-card"><img src="minang.jpg"><p>Minang</p></div>
+      <div class="look-card"><img src="palembang.jpeg"><p>Palembang</p></div>
+      <div class="look-card"><img src="betawii.jpg"><p>Betawi</p></div>
+      <div class="look-card"><img src="jawa.jpg"><p>Jawa</p></div>
+      <div class="look-card"><img src="jawa solo.jpg"><p>Jawa Solo</p></div>
     </div>
   </section>
 
@@ -94,16 +99,14 @@
   </section>
 
   <footer>
-  <p>© 2025 Kamila Wedding | Makeup Artist Profesional</p>
-  <div class="social-links">
-    <a href="https://www.instagram.com/kamila.weddingg" target="_blank">Instagram</a>
-    <a href="https://www.tiktok.com/@kamila.wedding" target="_blank">TikTok</a>
-  </div>
-</footer>
-
+    <p>© 2025 Kamila Wedding | Makeup Artist Profesional</p>
+    <div class="social-links">
+      <a href="https://www.instagram.com/kamila.weddingg" target="_blank">Instagram</a>
+      <a href="https://www.tiktok.com/@kamila.wedding" target="_blank">TikTok</a>
+    </div>
+  </footer>
 
   <script>
-    // Efek animasi saat scroll
     const fadeElements = document.querySelectorAll('.fade-in');
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -112,7 +115,6 @@
     }, { threshold: 0.2 });
     fadeElements.forEach(el => observer.observe(el));
 
-    // Kirim ke WhatsApp
     function sendWhatsApp(e) {
       e.preventDefault();
       const nama = document.getElementById("nama").value;
