@@ -66,3 +66,109 @@
   }
   </script>
 </head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Kamila Wedding</div>
+      <ul class="nav-links">
+        <li><a href="#home">Beranda</a></li>
+        <li><a href="#about">Tentang</a></li>
+        <li><a href="#services">Layanan</a></li>
+        <li><a href="#booking">Booking</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero fade-in">
+    <div class="hero-content">
+      <h2>Cantik Tanpa Berubah 💄</h2>
+      <p>Makeup elegan yang buatmu percaya diri di momen istimewa</p>
+      <a href="#booking" class="btn">Booking Sekarang</a>
+    </div>
+  </section>
+
+  <!-- Tentang -->
+  <section id="about" class="about fade-in">
+    <h2>Tentang Kami</h2>
+    <p>Tim Kamila Wedding hadir untuk menciptakan tampilan terbaikmu di hari spesial. Fokus kami adalah makeup yang menonjolkan kecantikan alami, elegan, dan tahan lama, sehingga kamu bisa menikmati setiap momen tanpa khawatir. Setiap detail diperhatikan supaya hasilnya flawless, membuatmu merasa percaya diri dan anggun sepanjang acara.”</p>
+  </section>
+
+  <!-- Layanan -->
+  <section id="services" class="services fade-in">
+    <h2>Layanan Kami</h2>
+    <div class="service-list">
+      <div class="service-card">
+        <img src="makeup11.jpg" alt="Bridal Makeup">
+        <h3>Bridal Makeup</h3>
+        <p>Tampil menawan dan elegan di hari pernikahanmu 💍</p>
+      </div>
+      <div class="service-card">
+        <img src="makeup graduationn.jpeg" alt="Graduation Makeup">
+        <h3>Graduation Makeup</h3>
+        <p>Makeup elegan untuk momen wisuda yang berkesan 🎓</p>
+      </div>
+      <div class="service-card">
+        <img src="photoshoot.jpg" alt="Photoshoot Makeup">
+        <h3>Photoshoot Makeup</h3>
+        <p>Tampilan menawan untuk prewedding atau konten profesional 📸</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Look Adat -->
+  <section id="looks" class="looks fade-in">
+    <h2>Look Adat</h2>
+    <div class="look-gallery">
+      <div class="look-card"><img src="sundaa.jpg" alt="Look Sunda"><p>Sunda</p></div>
+      <div class="look-card"><img src="minang.jpg" alt="Look Minang"><p>Minang</p></div>
+      <div class="look-card"><img src="palembang.jpeg" alt="Look Palembang"><p>Palembang</p></div>
+      <div class="look-card"><img src="betawii.jpg" alt="Look Betawi"><p>Betawi</p></div>
+      <div class="look-card"><img src="jawa.jpg" alt="Look Jawa"><p>Jawa</p></div>
+       <div class="look-card"><img src="jawa solo.jpg" alt="Look Jawa"><p>Jawa solo</p></div>
+    </div>
+  </section>
+
+  <!-- Booking -->
+  <section id="booking" class="booking fade-in">
+    <h2>Booking Sekarang 💌</h2>
+    <form onsubmit="sendWhatsApp(event)">
+      <input type="text" id="nama" placeholder="Nama Kamu" required />
+      <input type="text" id="tanggal" placeholder="Tanggal Acara (DD/MM/YYYY)" required />
+      <textarea id="pesan" placeholder="Detail acara atau kebutuhan makeup kamu..." required></textarea>
+      <button type="submit" class="btn">Kirim via WhatsApp</button>
+    </form>
+  </section>
+
+  <footer>
+  <p>© 2025 Kamila Wedding | Makeup Artist Profesional</p>
+  <div class="social-links">
+    <a href="https://www.instagram.com/kamila.weddingg" target="_blank">Instagram</a>
+    <a href="https://www.tiktok.com/@kamila.wedding" target="_blank">TikTok</a>
+  </div>
+</footer>
+
+
+  <script>
+    // Efek animasi saat scroll
+    const fadeElements = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('show');
+      });
+    }, { threshold: 0.2 });
+    fadeElements.forEach(el => observer.observe(el));
+
+    // Kirim ke WhatsApp
+    function sendWhatsApp(e) {
+      e.preventDefault();
+      const nama = document.getElementById("nama").value;
+      const tanggal = document.getElementById("tanggal").value;
+      const pesan = document.getElementById("pesan").value;
+      const url = `https://wa.me/6289525939647?text=Halo%20Kamila%20Wedding!%0ASaya%20${nama}%0AIngin%20booking%20tanggal%20${tanggal}%0A%0A${pesan}`;
+      window.open(url, "_blank");
+    }
+  </script>
+</body>
+</html>
